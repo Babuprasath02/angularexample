@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="dropdown.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="select" ng-controller="option">
+    <select ng-model="value" ng-options="x.model for x in list">
+        <!-- <option ng-repeat="x in list">{{x}}</option> -->
+    </select><br>
+    You Selected Car:{{value.model}}<br>
+    Car Color:{{value.color}}
+
+</body>
+</html>

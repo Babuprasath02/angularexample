@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="sorting.js"></script>
+</head>
+<body ng-app="sorting" ng-controller="sorttable">
+    <table width="40%" border="2">
+        <tr>
+            <th ng-click="myOrderBy('name')">Name</th>
+            <th ng-click="myOrderBy('country')">Country</th>
+        </tr>
+        <tr ng-repeat="x in names | orderBy:orderby">
+            <td>{{x.name}}</td>
+            <td>{{x.country}}</td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>

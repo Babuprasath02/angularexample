@@ -1,0 +1,11 @@
+angular.module("filter",[])
+.controller("testfilter",function($scope){
+    $scope.names=[
+        'Babu',
+        'Neer',
+        'Mani',
+        'Selva',
+        'Karthi',
+        'Navin'
+    ];
+});

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <input type="checkbox" ng-model="all">SelectAll
+
+    <input type="checkbox" ng-checked="all">Java
+    <input type="checkbox" ng-checked="all">Python
+    <input type="checkbox" ng-checked="all">.Net
+    <div ng-init="checked-true">
+        NewUser:<input type="checkbox" ng-model="checked">
+        <br>
+        Name:<input type="text" ng-if="checked"><br>
+        ReadOnly:<input type="text" ng-readonly="checked" value="Welcome Back">
+        Disabled:<input type="text" ng-disabled="checked" value="Hello There">
+
+    </div>
+    <div ng-controller="MyController">
+        <p><span ng-bind="num"></span></p>
+    </div>
+    <script>
+        var myModule = angular.module("myModule", []);  
+        myModule.factory("myFactory", function() {  
+    return "a value";  
+});  
+myModule.controller("MyController", function($scope, myFactory) {  
+console.log(myFactory);   
+});  
+    </script>
+</body>
+</html>

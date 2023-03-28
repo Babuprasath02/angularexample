@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    
+</head>
+<body ng-app="oneway">
+    <div ng-controller="databinding" >
+        <h1><span ng-bind="msg"></span></h1>
+        <button click="msg">Click</button>
+
+    </div>
+    <script>
+        angular.module("oneway",[])
+        .controller("databinding",function($scope){
+            $scope.msg="Hello there";
+        });
+    </script>
+</body>
+</html>

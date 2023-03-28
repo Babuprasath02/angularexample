@@ -1,0 +1,11 @@
+angular.module('sorting',[])
+.controller('sorttable',function($scope){
+    $scope.names=[
+        {'name':'NK','country':'Bangkock'},
+        {'name':'Mani','country':'USA'},
+        {'name':'Babu','country':'Thailand'}
+    ];
+    $scope.myOrderBy=function(x){
+        $scope.orderby=x;
+    }
+})

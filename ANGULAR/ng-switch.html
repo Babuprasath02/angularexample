@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="">
+    <form>
+        Pick a topic:<br>
+        <input type="radio" ng-model="myModel" value="c">C<br>
+        <input type="radio" ng-model="myModel" value="c++">C++<br>
+        <input type="radio" ng-model="myModel" value="java">Java<br>
+        <input type="radio" ng-model="myModel" value="python">Python<br>
+    </form>
+    <div ng-switch="myModel">
+        <div ng-switch-when="c">
+           Selected:<p><span ng-bind="myModel"></span></p>
+        </div>
+        <div ng-switch-when="c++">
+            Selected:<p><span ng-bind="myModel"></span></p>
+        </div>
+        <div ng-switch-when="java">
+            Selected:<p><span ng-bind="myModel"></span></p>
+        </div>
+        <div ng-switch-when="python">
+            Selected:<p><span ng-bind="myModel"></span></p>
+        </div>
+    </div>
+    
+</body>
+</html>

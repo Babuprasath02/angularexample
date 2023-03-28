@@ -1,0 +1,27 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>ng-bind example</title>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>  
+<body ng-app="bindExample">  
+  <script>  
+  angular.module('bindExample', [])  
+    .controller('ExampleController', ['$scope', function($scope) {  
+      $scope.name = '';  
+    }]);  
+</script>  
+<div ng-controller="ExampleController">  
+  <label>Enter name: <input type="text" ng-model="name"></label><br>  
+  Hello <span ng-bind="name"></span>! 
+  <h1>{{name}}</h1> 
+</div> 
+<div ng-app="bindExample" ng-controller="ExampleController">
+<p ng-bind-html="name"></p>
+</div> 
+</body>  
+</html>  

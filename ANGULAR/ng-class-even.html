@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .stripped{
+            color:grey;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app="objarr">
+    <table ng-controller="myObjArr">
+        <td ng-repeat="x in records" ng-class-odd="'stripped'">
+            <p>{{x.Name}}</p>
+            <p>{{x.Country}}</p>
+        </td>
+    </table>
+    
+</body>
+<script>
+    angular.module("objarr",[])
+    .controller("myObjArr",function($scope){
+        $scope.records=[{
+            "Name":"Babu",
+            "Country":"India"
+        },
+    {
+        "Name":"NeerKaath",
+        "Country":"Thailand"
+    }]
+    })
+</script>
+</html>

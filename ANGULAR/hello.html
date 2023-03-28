@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style1.css" type="text/css" rel="stylesheet">
+    <script src="d:/Babu/ANGULAR/script1.js"></script>
+</head>
+<body ng-app="myApp" ng-init="person={firstName:'Babu',lastName:'Prasath'}">
+    <!-- Expressions-->
+    <div ng-controller="Hello">
+        <h1>Hello {{hello}} {{4+9}}</h1>
+        <p>Total in dollar: {{ quantity * cost }}</p> 
+        <h2>Person: <span ng-bind="person.firstName+ ' ' +person.lastName"></span></h2>
+        <p>My name is {{ person.firstName }}</p> 
+        Enter Name:<input type="text" ng-model="msg" >
+        <button ng-click="name(msg)">Click</button>
+    </div>
+    <div ng-app="" ng-init="points=[1,15,19,2,40]">  
+        <p>The first result is {{ points[0] }}</p> 
+        <p>The first result is <span ng-bind="points[4]"></span></p>
+        <!-- two way data binding -->
+        <p>Enter your Name: <input type = "text" ng-model = "name"></p> 
+        <p>You Wrote: <span ng-bind="name"></span></p>
+        Quantity: <input type="number" ng-model="quantity"> <br><br> 
+Price: <input type="number" ng-model="price">  
+<p><b>Total in rupees:</b> {{quantity * price}}</p> 
+         
+        </div>
+        <!-- ng-repeat -->
+        <div ng-app = "" ng-init = "countries = [{locale:'en-IND',name:'India'}, {locale:'en-PAK',name:'Pakistan'}, {locale:'en-AUS',name:'Australia'}]">  
+            <ol>  
+                <li ng:repeat = "country in countries">  
+                   {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}  
+                </li>  
+             </ol>  
+         </div>    
+    <!-- <script>
+        
+        </script> -->
+        <div ng-init="firstName='Babu';secondName='Prasath'">
+            <p><span ng:bind="firstName + secondName"></span></p>
+            
+        </div>
+       
+</body>
+
+</html>

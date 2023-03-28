@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>  
+        .Normal {  
+            color:white;  
+            background-color:grey;  
+            padding:20px;  
+            font-family:"Courier New";  
+        }  
+        .Medium {  
+            color:white;  
+            background-color:brown;  
+            padding:30px;  
+            font-family:"Courier New";  
+        }  
+        .Large {  
+            background-color:red;  
+            padding:40px;  
+            font-family:Verdana;  
+        }  
+        </style>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <select ng-model="model">
+        <option value="Medium">Medium</option>
+        <option value="Normal">Normal</option>
+        <option value="Large">Large</option>
+    </select>
+    <div ng-class="model">  
+        <h1>Welcome To JavaTpoint!</h1>  
+        <p>A solution of all technologies!</p>  
+      </div>  
+      <div ng-class="model">  
+        <h1>Welcome To JavaTpoint!</h1>  
+        <p>A solution of all technologies!</p>  
+      </div>  
+</body>
+</html>
